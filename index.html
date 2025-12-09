@@ -1,30 +1,163 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MystR</title>
-    <link rel="icon" type="image/x-icon" href="assets/MystR-Logo-White-NoSmoke.png">
+    <title>MystR - Acceuil</title>
+    <script src="app.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,800&display=swap" rel="stylesheet">
+    <link
+        href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@100,200,300,400,500,700,800,900,1&f[]=stardom@400&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/MystR-Logo-White-NoSmoke.png">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div id="left-header">
-                <a href="index.html"><img src="assets/MystR-Name-White.png" alt="MystR-Name-White"></a>
+    <nav>
+        <a href="index.html">
+            <img src="assets/WEBP/MystR-Name-White.webp" alt="MystR-Name-White">
+        </a>
+        <a class="grow-hover" href="#">
+            <img src="assets/PNG/roster-white.png" alt="">
+            <h1>Équipes</h1>
+        </a>
+        <a class="grow-hover" href="#">
+            <img src="assets/PNG/events-white.png" alt="">
+            <h1>Événements</h1>
+        </a>
+        <a class="grow-hover" href="#">
+            <img src="assets/PNG/shop-white.png" alt="">
+            <h1>Boutique</h1>
+        </a>
+    </nav>
+
+    <main>
+        <section id="banner">
+            <img src="assets/PNG/banner.png" alt="background-image">
+            <img src="assets/WEBP/MystR-Smoke-White.webp" alt="MystR-Smoke-White">
+            <img src="assets/WEBP/MystR-Logo-White-NoSmoke.webp" alt="MystR-Logo-White">
+        </section>
+
+        <section id="section-actualites">
+            <div class="title">
+                <h1>Actualités</h1>
+                <hr>
             </div>
-            <div id="right-header">
-                <input type="button" value="Boutique">
-                <input type="button" value="Rosters">
-                <input type="button" value="Evenements">
+            <div id="actualites">
+                <div>
+                    <div class="border-wrapper">
+                        <img src="assets/WEBP/VCT.webp" alt="">
+                    </div>
+                    <h2>Prochain stream de VCT le 01/01 !!! Soyez au rendez-vous !</h2>
+                </div>
+                <div>
+                    <div class="border-wrapper">
+                        <img src="assets/PNG/tft.png" alt="">
+                    </div>
+                    <h2>Découvrez notre nouvelle équipe sur Teamfights Tactics !</h2>
+                </div>
+                <div>
+                    <div class="border-wrapper">
+                        <img src="assets/Merch/purple_cap.png" alt="">
+                    </div>
+                    <h2>Nouveaux articles disponibles !!! Précommandez dès maintenant</h2>
+                </div>
             </div>
-        </nav>
-        <div id="banner">
-            <img id="background-image" src="assets/banner.png" alt="background-image">
-            <img id="logo" src="assets/MystR-Logo-White.png" alt="MystR-Logo-White">
+        </section>
+
+        <section id="section-boutique">
+            <div class="title">
+                <h1>Notre dernière collaboration</h1>
+                <hr>
+            </div>
+            <div>
+                <img src="assets/WEBP/ipssi.webp" alt="">
+                <h2>Nous avons dernièrement décidé de collaborer avec une grande école d’informatique.<br>
+                    Cela permet aux fans de jeux videos de s’intéresser d’avantage aux fonctionnements de ce qui les fascinent tant.<br>
+                    Cette collaboration permet également de démocratiser encore plus l’intérêt porté vers l’esport, notamment envers les professionnels du secteurs.</h2>
+            </div>
+            <a href="#">
+                <h1 class="button grow-hover">Accedez à notre boutique</h1>
+            </a>
+        </section>
+
+        <section id="section-roster">
+            <div class="title">
+                <h1>Nos rosters</h1>
+                <hr>
+            </div>
+            <div class="carousel">
+                <img class="grow-hover" id="left-arrow" src="assets/PNG/left-arrow.png" alt="">
+                <img class="grow-hover" id="right-arrow" src="assets/PNG/right-arrow.png" alt="">
+                <div class="carousel-image">
+                    <div class="border-wrapper">
+                        <img src="assets/WEBP/valorant.webp" alt="">
+                    </div>
+                </div>
+                <div class="carousel-image">
+                    <div class="border-wrapper">
+                        <img src="assets/PNG/fornite.png" alt="">
+                    </div>
+                </div>
+                <div class="carousel-image">
+                    <div class="border-wrapper">
+                        <img src="assets/WEBP/tft-name.webp" alt="">
+                    </div>
+                </div>
+                <div class="carousel-image">
+                    <div class="border-wrapper">
+                        <img src="assets/WEBP/lol-name.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="section-evenement">
+            <div class="title">
+                <h1>Notre prochain événement</h1>
+                <hr>
+            </div>
+            <div>
+                <img src="assets/PNG/MystR-keynote.png" alt="">
+                <h2>Restez connecté et rejoignez-nous pour notre keynote de l’année 2026.<br>
+                    Nous y dévoilerons nos changements de joueurs et nos nouveaux projets pour l’année à venir qui marquera fondamentalement notre histoire en tant que communauté.<br>
+                    Alors ne manquez pas de nous rejoindre en stream sur Twitch et Youtube le 27/12 à 21h00 pour voir toutes ces belles annonces.<br>
+                    Pour plus d’informations, suivez nous nos différents réseaux.</h2>
+            </div>
+            <a href="#">
+                <h1 class="button grow-hover">Accedez à notre planning</h1>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div id="footer-purple">
+            <img src="assets/PNG/MystR-Logo-White.png" alt="">
+            <div>
+                <h3>MystR</h3>
+                <div id="socials">
+                    <img class="grow-hover" src="assets/PNG/discord.png" alt="">
+                    <img class="grow-hover" src="assets/PNG/instagram.png" alt="">
+                    <img class="grow-hover" src="assets/PNG/twitter-alt.png" alt="">
+                    <img class="grow-hover" src="assets/PNG/youtube.png" alt="">
+                    <img class="grow-hover" src="assets/PNG/twitch.png" alt="">
+                    <img class="grow-hover" src="assets/PNG/tik-tok.png" alt="">                   
+                </div>
+            </div>
+            <div id="legal">
+                <a href="#" class="grow-hover" ><h3>Mentions légales</h3></a>
+                <a href="#" class="grow-hover" ><h3>Conditions générales d’utilisation</h3></a>
+                <a href="#" class="grow-hover" ><h3>Conditions générales de vente</h3></a>
+                <a href="#" class="grow-hover" ><h3>FAQ</h3></a>
+            </div>
         </div>
-    </header>
+        <div id="footer-orange">
+            <h1>Newsletter</h1>
+            <h3>Restez connectez à Mystr, annonces , nouveaux produits et bien plus...!</h3>
+            <input type="text" placeholder="Votre email">
+        </div>
+    </footer>
 </body>
+
 </html>
