@@ -41,7 +41,7 @@ window.addEventListener("click", (event) => {
   }
 });
 
-if (page === "index.html" || page == "") {
+if (page === "index.html") {
   const smoke = document.querySelector(
     "main section:nth-child(1) img:nth-child(2)"
   );
@@ -60,7 +60,7 @@ if (page === "index.html" || page == "") {
   rotate();
 }
 
-if (pagepage.includes("roster") || page === "index.html" || page == "") {
+if (page === "roster.html" || page === "index.html") {
   const left_arrows = document.getElementsByClassName("left-arrow");
   const right_arrows = document.getElementsByClassName("right-arrow");
   const carousel = document.getElementsByClassName("carousel");
@@ -75,13 +75,15 @@ if (pagepage.includes("roster") || page === "index.html" || page == "") {
   }
 }
 
-if (page.includes("boutique")) {
+if (page === "boutique.html") {
   const searchbar = document.querySelector("#searchbar input");
   const names = document.querySelectorAll(".article h2:nth-child(2)");
   console.log(names);
   searchbar.addEventListener("input", () => {
     for (let i = 0; i < names.length; i++) {
-      if (names[i].innerHTML.toLowerCase().includes(searchbar.value.toLowerCase())) {
+      if (
+        names[i].innerHTML.toLowerCase().includes(searchbar.value.toLowerCase())
+      ) {
         names[i].parentElement.style.display = "flex";
       } else {
         names[i].parentElement.style.display = "none";
