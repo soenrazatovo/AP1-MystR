@@ -21,10 +21,7 @@ const innerHTMLs = [
     "Politique de confidentialité",
     "1. Collecte des données\nLe site mystresport.com peut collecter des données personnelles via :\n- Formulaire de contact (nom, prénom, adresse e-mail, téléphone).\n- Cookies de navigation (statistiques anonymes).\n\n2. Finalité\nLes données collectées sont utilisées uniquement pour :\n- Répondre aux demandes des utilisateurs.\n- Améliorer l’expérience de navigation.\n- Assurer le bon fonctionnement du site.\n\n3. Conservation\nLes données sont conservées pendant une durée maximale de [X mois/années] et uniquement pour les finalités mentionnées.\n\n4. Partage\nLes données ne sont jamais vendues ni transmises à des tiers, sauf obligation légale.\n\n5. Droits des utilisateurs\nConformément au RGPD, chaque utilisateur dispose de droits :\n- Droit d’accès, de rectification et de suppression de ses données.\n- Droit d’opposition au traitement.\n- Droit à la portabilité.\nPour exercer ces droits, l’utilisateur peut contacter l’éditeur à l’adresse suivante : conctact@mystr-esport.fr\n\n6. Cookies\nLe site utilise des cookies pour améliorer la navigation et réaliser des statistiques anonymes.\nL’utilisateur peut paramétrer son navigateur pour refuser les cookies.\n\n7. Sécurité\nL’éditeur met en œuvre des mesures techniques et organisationnelles pour protéger les données personnelles contre toute perte, accès non autorisé ou divulgation.",
   ],
-  [
-    "FAQ",
-    "Retrouver notre FAQ sur https://mystr-faq.com"
-  ],
+  ["FAQ", "Retrouver notre FAQ sur https://mystr-faq.com"],
 ];
 for (let i = 0; i < links.length; i++) {
   links[i].addEventListener("click", () => {
@@ -84,11 +81,32 @@ if (page === "boutique.html") {
   console.log(names);
   searchbar.addEventListener("input", () => {
     for (let i = 0; i < names.length; i++) {
-      if (names[i].innerHTML.toLowerCase().includes(searchbar.value.toLowerCase())) {
+      if (
+        names[i].innerHTML.toLowerCase().includes(searchbar.value.toLowerCase())
+      ) {
         names[i].parentElement.style.display = "flex";
       } else {
         names[i].parentElement.style.display = "none";
       }
     }
   });
+
+  const articles = document.querySelectorAll(".article");
+  const article_img_orange = document.querySelectorAll(".article-image-1");
+  const article_img_purple = document.querySelectorAll(".article-image-2");
+  const article_color_orange = document.querySelectorAll(".article-color-1");
+  const article_color_purple = document.querySelectorAll(".article-color-2");
+
+  for(let i=0; i<articles.length; i++){
+    article_color_orange[i].addEventListener("click", () => {
+      article_img_orange[i].style.display = "block";
+      article_img_purple[i].style.display = "none";
+      articles[i].style.backgroundColor = "#FF8800";
+    });
+    article_color_purple[i].addEventListener("click", () => {
+      article_img_orange[i].style.display = "none";
+      article_img_purple[i].style.display = "block";
+      articles[i].style.backgroundColor = "#7151A9";
+    });
+  }
 }

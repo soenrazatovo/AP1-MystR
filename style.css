@@ -340,16 +340,23 @@ main hr {
 }
 
 .article {
-    width: 250px;
+    width: 300px;
     display: flex;
     flex-direction: column;
-    background-color: #7151A9;
+    justify-content: space-between;
+    background-color: #ff8800;
     padding: 25px;
+    border-radius: 25px;
+}
+
+.article-image-2{
+    display: none;
 }
 
 .article img:not([class="color-purple"]):not([class="color-orange"]) {
     object-fit: fill;
     width: 100%;
+    border-radius: 12.5px;
 }
 
 .article i h2 {
