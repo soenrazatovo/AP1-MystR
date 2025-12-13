@@ -41,7 +41,7 @@ window.addEventListener("click", (event) => {
   }
 });
 
-if (page === "index.html") {
+if (page.includes("index") || page == "") {
   const smoke = document.querySelector(
     "main section:nth-child(1) img:nth-child(2)"
   );
@@ -60,7 +60,7 @@ if (page === "index.html") {
   rotate();
 }
 
-if (page === "roster.html" || page === "index.html") {
+if (page.includes("roster") || page.includes("index") || page == "") {
   const left_arrows = document.getElementsByClassName("left-arrow");
   const right_arrows = document.getElementsByClassName("right-arrow");
   const carousel = document.getElementsByClassName("carousel");
@@ -75,7 +75,7 @@ if (page === "roster.html" || page === "index.html") {
   }
 }
 
-if (page === "boutique.html") {
+if (page.includes("boutique")) {
   const searchbar = document.querySelector("#searchbar input");
   const names = document.querySelectorAll(".article h2:nth-child(2)");
   console.log(names);
