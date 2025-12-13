@@ -155,7 +155,6 @@ main hr {
 
 #section-boutique div:nth-child(2) img, #section-evenement div:nth-child(2) img{
     object-fit: fill;
-    /* height: 250px; */
     width: 250px;
     border-radius: 20px;
 }
@@ -240,7 +239,7 @@ main hr {
     margin: 65px auto 20px auto;
 }
 
-main section:nth-child(5) div:not([class="title"]) {
+#section-evenement div:not([class="title"]) {
     display: flex;
     flex-direction: row-reverse;
     margin-top: 65px;
@@ -307,6 +306,68 @@ main section:nth-child(5) div:not([class="title"]) {
     width: 50vw;
     border-radius: 20px;
 }
+main{
+    margin-top: 100px;
+}
+
+#searchbar{
+    width: 100%;
+}
+
+#searchbar input{
+    font-size: 30px;
+    padding: 20px;
+    width: 50%;
+    margin: 50px 25%;
+}
+
+#grid-articles{
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 0px 50px;
+    gap: 50px;
+}
+
+.article{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    background-color: #7151A9;
+    padding: 25px;
+}
+
+.article img:not([class="color-purple"]):not([class="color-orange"]){
+    object-fit: fill;
+    width: 100%;
+}
+
+.article i h2{
+    margin-bottom: 0px;
+}
+
+.article-color{
+    display: flex;
+    gap: 25px;
+}
+
+.article-color div{
+    width: 50px;
+    height: 50px;
+}
+
+.article-color div:nth-child(1){
+    background-color: #ffc300;
+}
+
+.article-color div:nth-child(2){
+    background-color: #C7ADFF;
+}
+
+
 
 footer, #footer-purple, #footer-orange{
     display: flex;
