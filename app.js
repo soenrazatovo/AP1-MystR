@@ -77,7 +77,7 @@ if (page.includes("roster") || page.includes("index") || page == "") {
 
 if (page.includes("boutique")) {
   const searchbar = document.querySelector("#searchbar input");
-  const names = document.querySelectorAll(".article h2:nth-child(2)");
+  const names = document.querySelectorAll(".article-name");
   console.log(names);
   searchbar.addEventListener("input", () => {
     for (let i = 0; i < names.length; i++) {
@@ -108,5 +108,40 @@ if (page.includes("boutique")) {
       article_img_purple[i].style.display = "block";
       articles[i].style.backgroundColor = "#7151A9";
     });
+  }
+}
+
+if (page.includes("evenement")) {
+  const month_list = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+  let index = [0,0,0,0];
+
+  const month_button = document.querySelectorAll("th button");
+  const month = document.querySelectorAll("th h4");
+
+  const calendar = document.querySelectorAll(".section-planning");
+
+  for(let i=0; i<month.length; i++){
+    calendar[i].querySelectorAll(".calendar-point." + month_list[index[i]]).forEach((point)=>{point.style.display = "block";});
+    calendar[i].querySelectorAll(".calendar-point:not(." + month_list[index[i]]+")").forEach((point)=>{point.style.display = "none";});
+
+    month_button[i*2].addEventListener("click", () => {
+      index[i] -= 1;
+      if(index[i]<0){
+        index[i]=11;
+      }
+      month[i].innerText = month_list[index[i]];
+      calendar[i].querySelectorAll(".calendar-point." + month_list[index[i]]).forEach((point)=>{point.style.display = "block";});
+      calendar[i].querySelectorAll(".calendar-point:not(." + month_list[index[i]]+")").forEach((point)=>{point.style.display = "none";});
+    });
+    month_button[i*2+1].addEventListener("click", () => {
+      index[i] += 1;
+      if(index[i]>11){
+        index[i]=0;
+      }
+      month[i].innerText = month_list[index[i]];
+      calendar[i].querySelectorAll(".calendar-point." + month_list[index[i]]).forEach((point)=>{point.style.display = "block";});
+      calendar[i].querySelectorAll(".calendar-point:not(." + month_list[index[i]]+")").forEach((point)=>{point.style.display = "none";});
+    });
+
   }
 }
