@@ -397,6 +397,105 @@ main hr {
     width: auto;
 }
 
+table, td, th{
+    border: 1px solid white;
+}
+
+table{
+    margin: auto;
+    border-collapse: collapse;
+    width: calc(50px * 7);
+    color: white;
+}
+
+tr{
+    display: flex;
+}
+
+th{
+    font-family: 'Stardom', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+}
+
+th h4{
+    margin: 0px;
+}
+
+td{
+    font-family: 'Cabinet-Grotesk', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 62.5px;
+    height: 62.5px;
+}
+
+.calendar-point {
+    margin: 0px;
+    align-self: center;
+    /* background-color: #ff8800; */
+    width: 25px;
+    height: 25px;
+    border-radius: 12.5px;
+
+}
+
+.calendar-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+  position: absolute;
+  margin-left: 12.5px;
+  margin-top: -12.5px;
+  background: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: opacity 0.3s;
+}
+
+.calendar-point:hover .calendar-tooltip{
+    visibility: visible;
+    opacity: 1;
+}
+
+.section-planning:nth-child(1){
+    margin-top: 165px;
+}
+.section-planning {
+    border-radius: 25px;
+    padding: 25px;
+    margin: 65px 65px 65px 65px ;
+    /* width: auto; */
+}
+
+.section-planning h1 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+
+.section-planning:nth-child(odd){
+    background: linear-gradient(to right, #ff8800,#ffa200,#ffc300);
+}
+
+.section-planning:nth-child(odd) .calendar-point{
+    background-color: #7151A9;
+}
+
+.section-planning:nth-child(even){
+    background: linear-gradient(to right, #7151A9,#916DD5,#C7ADFF);
+}
+
+.section-planning:nth-child(even) .calendar-point{
+    background-color: #ff8800;  
+}
+
+
+
 footer,
 #footer-purple,
 #footer-orange {
